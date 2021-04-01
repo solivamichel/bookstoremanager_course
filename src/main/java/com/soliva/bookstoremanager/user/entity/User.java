@@ -1,6 +1,7 @@
 package com.soliva.bookstoremanager.user.entity;
 
 import com.soliva.bookstoremanager.books.entity.Book;
+import com.soliva.bookstoremanager.entity.Auditable;
 import com.soliva.bookstoremanager.user.enums.Gender;
 import lombok.Data;
 
@@ -18,7 +19,7 @@ import java.util.List;
 
 @Data
 @Entity
-public class User {
+public class User extends Auditable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

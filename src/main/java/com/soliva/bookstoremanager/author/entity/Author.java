@@ -1,6 +1,7 @@
 package com.soliva.bookstoremanager.author.entity;
 
 import com.soliva.bookstoremanager.books.entity.Book;
+import com.soliva.bookstoremanager.entity.Auditable;
 import lombok.Data;
 
 import javax.persistence.Column;
@@ -10,12 +11,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import java.io.Serializable;
 import java.util.List;
 
 @Data
 @Entity
-public class Author implements Serializable {
+public class Author extends Auditable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
