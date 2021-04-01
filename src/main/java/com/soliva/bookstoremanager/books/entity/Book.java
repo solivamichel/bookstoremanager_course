@@ -1,6 +1,7 @@
 package com.soliva.bookstoremanager.books.entity;
 
 import com.soliva.bookstoremanager.author.entity.Author;
+import com.soliva.bookstoremanager.entity.Auditable;
 import com.soliva.bookstoremanager.publishers.entity.Publisher;
 import com.soliva.bookstoremanager.user.entity.User;
 import lombok.Data;
@@ -15,7 +16,7 @@ import javax.persistence.ManyToOne;
 
 @Data
 @Entity
-public class Book {
+public class Book extends Auditable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
